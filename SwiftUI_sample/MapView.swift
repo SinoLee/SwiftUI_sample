@@ -2,28 +2,26 @@
 //  MapView.swift
 //  SwiftUI_sample
 //
-//  Created by Lee Taeyoun on 2019/06/06.
-//  Copyright © 2019 Sino. All rights reserved.
+//  Created by Taeyoun Lee on 2020/01/24.
+//  Copyright © 2020 SwiftLab. All rights reserved.
 //
 
 import SwiftUI
 import MapKit
 
-struct MapView : UIViewRepresentable {
+struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         MKMapView(frame: .zero)
     }
-    
     func updateUIView(_ view: MKMapView, context: Context) {
-        let coordinate = CLLocationCoordinate2D(
-            latitude: 34.011286, longitude: -116.166868)
+        let coordinate = CLLocationCoordinate2D(latitude: 34.011286, longitude: -116.166868)
         let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         view.setRegion(region, animated: true)
     }
 }
 
-struct MapView_Previews : PreviewProvider {
+struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
     }

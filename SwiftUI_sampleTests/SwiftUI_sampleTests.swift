@@ -2,8 +2,8 @@
 //  SwiftUI_sampleTests.swift
 //  SwiftUI_sampleTests
 //
-//  Created by Lee Taeyoun on 2019/06/06.
-//  Copyright © 2019 Sino. All rights reserved.
+//  Created by Taeyoun Lee on 2020/01/24.
+//  Copyright © 2020 SwiftLab. All rights reserved.
 //
 
 import XCTest

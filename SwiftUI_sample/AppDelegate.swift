@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SwiftUI_sample
 //
-//  Created by Lee Taeyoun on 2019/06/06.
-//  Copyright © 2019 Sino. All rights reserved.
+//  Created by Taeyoun Lee on 2020/01/24.
+//  Copyright © 2020 SwiftLab. All rights reserved.
 //
 
 import UIKit
@@ -17,12 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -41,14 +35,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
-    lazy var persistentContainer: NSPersistentContainer = {
+    lazy var persistentContainer: NSPersistentCloudKitContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "SwiftUI_sample")
+        let container = NSPersistentCloudKitContainer(name: "SwiftUI_sample")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

@@ -2,19 +2,13 @@
 //  ContentView.swift
 //  SwiftUI_sample
 //
-//  Created by Lee Taeyoun on 2019/06/06.
-//  Copyright © 2019 Sino. All rights reserved.
+//  Created by Taeyoun Lee on 2020/01/24.
+//  Copyright © 2020 SwiftLab. All rights reserved.
 //
 
 import SwiftUI
 
-struct ContentView : View {
-    func showNext() {
-        print("Show Next ...")
-        //ContentView()
-        //CircleImage()
-        
-    }
+struct ContentView: View {
     var body: some View {
         VStack {
             MapView()
@@ -24,30 +18,27 @@ struct ContentView : View {
             CircleImage()
                 .offset(y: -130)
                 .padding(.bottom, -130)
-
-            HStack {
-                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                Spacer()
-                Text("Hello World")
-                    .font(.title)
-                    .color(.red)
-                Spacer()
-                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-            }
-                .padding()
             
-            Button(action: showNext) {
-                Text("Show Next")
+            VStack(alignment: .leading) {
+                Text("Turtile Rock")
+                    .font(.title)
+                HStack(alignment: .top) {
+                    Text("Joshua Tree National Park")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("Califonia")
+                        .font(.subheadline)
+                }
             }
+            .padding()
+            
             Spacer()
         }
     }
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-#endif
